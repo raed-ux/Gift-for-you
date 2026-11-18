@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مفاجأة رهيبة لك 🎁</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Changa:wght@700;900&family=Lalezar&display=swap');
+
+    :root {
+      --neon-pink: #ff00ff;
+      --neon-green: #39ff14;
+      --neon-yellow: #ffff00;
+      --neon-cyan: #00ffff;
+      --ugly-orange: #ff5500;
+      --eye-hurt-blue: #1e00ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      overflow: hidden;
+      font-family: 'Changa', 'Comic Sans MS', 'Tahoma', cursive, sans-serif;
+      background-color: var(--neon-yellow);
+      animation: bgColorParty 2.5s infinite alternate;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    @keyframes bgColorParty {
+      0% { background-color: #ffff00; }
+      25% { background-color: #ff00ff; }
+      50% { background-color: #39ff14; }
+      75% { background-color: #00ffff; }
+      100% { background-color: #ff5500; }
+    }
+
+    .stupid-bg-layer {
+      position: fixed;
+      inset: -50%;
+      width: 200%;
+      height: 200%;
+      z-index: 0;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      transform: rotate(-14deg);
+      opacity: 0.45;
+    }
+
+    .bg-row {
+      white-space: nowrap;
+      font-family: 'Lalezar', 'Impact', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 900;
+      letter-spacing: 6px;
+      animation: slideLeft 9s linear infinite;
+    }
+
+    .bg-row:nth-child(even) {
+      animation: slideRight 7s linear infinite;
+      color: var(--eye-hurt-blue);
+      text-shadow: 3px 3px 0 var(--neon-yellow);
+    }
+
+    .bg-row:nth-child(odd) {
+      color: #ff0000;
+      text-shadow: 3px 3px 0 var(--neon-cyan);
+    }
+
+    @keyframes slideLeft {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-25%); }
+    }
+
+    @keyframes slideRight {
+      0% { transform: translateX(-25%); }
+      100% { transform: translateX(0%); }
+    }
+
+    .goofy-card {
+      position: relative;
+      z-index: 10;
+      width: 92%;
+      max-width: 540px;
+      background: repeating-linear-gradient(
+        45deg,
+        #00ffff,
+        #00ffff 20px,
+        #ffea00 20px,
+        #ffea00 40px
+      );
+      border: 9px dashed #ff0055;
+      border-radius: 42% 18% 48% 22% / 22% 45% 19% 44%;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 15px 15px 0px #1e00ff, -12px -12px 0px #39ff14;
+      animation: cardWobble 1.8s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+
+    @keyframes cardWobble {
+      0%, 100% { transform: rotate(-2.5deg) scale(1); }
+      50% { transform: rotate(2.5deg) scale(1.02); }
+    }
+
+    body.dizzy-mode .goofy-card {
+      animation: superSpin 1.2s linear infinite;
+    }
+
+    @keyframes superSpin {
+      0% { transform: rotate(0deg) scale(0.95); }
+      50% { transform: rotate(180deg) scale(1.08); }
+      100% { transform: rotate(360deg) scale(0.95); }
+    }
+
+    .siren-badge {
+      display: inline-block;
+      background: #ff0000;
+      color: #ffff00;
+      font-size: 1rem;
+      padding: 6px 18px;
+      border: 4px solid #000;
+      border-radius: 50px 5px 50px 5px;
+      transform: rotate(3deg);
+      animation: blinkFast 0.4s infinite alternate;
+      margin-bottom: 10px;
+    }
+
+    @keyframes blinkFast {
+      from { background: #ff0000; color: #ffff00; }
+      to { background: #1e00ff; color: #39ff14; }
+    }
+
+    .main-title {
+      font-family: 'Lalezar', 'Impact', sans-serif;
+      font-size: clamp(2.6rem, 8vw, 4.2rem);
+      margin: 8px 0;
+      color: #ff00aa;
+      background: #ffffff;
+      border: 6px solid #000;
+      border-radius: 15px 50px 10px 45px;
+      padding: 10px 15px;
+      text-shadow: 4px 4px 0px #39ff14, -3px -3px 0px #00ffff;
+      transform: rotate(-1.5deg);
+      line-height: 1.15;
+    }
+
+    .sub-roast {
+      background: #1e00ff;
+      color: #39ff14;
+      font-size: 1.15rem;
+      padding: 10px;
+      border: 4px dotted #ffff00;
+      border-radius: 30px 8px 25px 12px;
+      margin: 14px 0;
+      transform: rotate(1.8deg);
+    }
+
+    .iq-scanner {
+      background: #ff5500;
+      border: 5px solid #000;
+      border-radius: 12px 35px 12px 35px;
+      padding: 12px;
+      margin: 14px 0;
+      color: #fff;
+    }
+
+    .progress-wrap {
+      width: 100%;
+      height: 24px;
+      background: #000;
+      border: 3px solid #39ff14;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: repeating-linear-gradient(
+        -45deg,
+        #39ff14,
+        #39ff14 10px,
+        #ff00ff 10px,
+        #ff00ff 20px
+      );
+      transition: width 0.2s;
+    }
+
+    .buttons-zone {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+      margin-top: 18px;
+    }
+
+    button {
+      font-family: 'Changa', 'Tahoma', sans-serif;
+      font-weight: 900;
+      cursor: pointer;
+      border: 5px solid #000;
+      transition: transform 0.15s ease;
+    }
+
+    button:active {
+      transform: scale(0.9) rotate(6deg);
+    }
+
+    #admitBtn {
+      background: #39ff14;
+      color: #1e00ff;
+      font-size: 1.35rem;
+      padding: 14px 26px;
+      border-radius: 40px 10px 40px 10px;
+      box-shadow: 7px 7px 0 #ff0055;
+      transform: rotate(-2deg);
+    }
+
+    #runawayBtn {
+      background: #ff0033;
+      color: #ffff00;
+      font-size: 1.05rem;
+      padding: 10px 20px;
+      border-radius: 8px 35px 8px 35px;
+      box-shadow: 5px 5px 0 #000;
+      position: relative;
+      z-index: 999;
+    }
+
+    #chaosBtn {
+      background: #ff00ff;
+      color: #ffffff;
+      font-size: 0.95rem;
+      padding: 8px 16px;
+      border-radius: 50%;
+      box-shadow: 4px 4px 0 #ffff00;
+    }
+
+    .certificate {
+      display: none;
+      margin-top: 16px;
+      background: #ffff00;
+      color: #000;
+      border: 6px double #ff0000;
+      border-radius: 25px 5px 25px 5px;
+      padding: 14px;
+      animation: popIn 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0) rotate(-30deg); }
+      to { transform: scale(1) rotate(2deg); }
+    }
+
+    .floating-sticker {
+      position: fixed;
+      pointer-events: none;
+      font-family: 'Lalezar', 'Impact', sans-serif;
+      font-size: 2rem;
+      font-weight: bold;
+      z-index: 1000;
+      text-shadow: 2px 2px 0 #000;
+      animation: floatUp 1.3s ease-out forwards;
+    }
+
+    @keyframes floatUp {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -180px) scale(1.8) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stupid-bg-layer" id="bgLayer"></div>
+
+  <div class="goofy-card" id="mainCard">
+    <div class="siren-badge">🚨 مبروك! تم اصطيادك بنجاح 🚨</div>
+
+    <h1 class="main-title">الي فتح الرابط غبي 🤡</h1>
+
+    <div class="sub-roast" id="roastText">
+      أي رابط يجيك تضغطه بدون تفكير؟ فعلاً غبي رسمي! 🧠❌
+    </div>
+
+    <div class="iq-scanner">
+      <div id="scanStatus">جاري فحص خلايا المخ... ⏳</div>
+      <div class="progress-wrap">
+        <div class="progress-bar" id="iqBar"></div>
+      </div>
+    </div>
+
+    <div class="buttons-zone">
+      <button id="admitBtn">أعترف إني غبي 🫡</button>
+      <button id="runawayBtn">اضغط هنا إذا أنت ذكي 🏃‍♂️</button>
+      <button id="chaosBtn">زر غبي لا تضغطه 🌀</button>
+    </div>
+
+    <div class="certificate" id="certBox">
+      <h2 style="margin:0; color:#ff0000;">📜 شهادة غباء معتمدة 📜</h2>
+      <p style="margin:8px 0; font-size:1.1rem;">
+        نشهد بأن صاحب هذا الجهاز <strong>غبي 100%</strong> وفتح الرابط بكل براءة.
+      </p>
+      <small id="certSerial"></small>
+    </div>
+  </div>
+
+  <script>
+    const bgLayer = document.getElementById('bgLayer');
+    const wordsPattern = "غبي 🤡 غبي 🧠❌ غبي 🤪 غبي 💩 غبي 🙈 ";
+    for (let i = 0; i < 14; i++) {
+      const row = document.createElement('div');
+      row.className = 'bg-row';
+      row.textContent = wordsPattern.repeat(10);
+      bgLayer.appendChild(row);
+    }
+
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    function playGoofySound(type) {
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      const now = audioCtx.currentTime;
+      if (type === 'boing') {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(160, now);
+        osc.frequency.exponentialRampToValueAtTime(620, now + 0.18);
+        gain.gain.setValueAtTime(0.2, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+        osc.start(now);
+        osc.stop(now + 0.2);
+      } else if (type === 'clown') {
+        osc.type = 'square';
+        osc.frequency.setValueAtTime(440, now);
+        osc.frequency.setValueAtTime(330, now + 0.12);
+        osc.frequency.setValueAtTime(220, now + 0.24);
+        gain.gain.setValueAtTime(0.2, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.45);
+        osc.start(now);
+        osc.stop(now + 0.45);
+      } else {
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(250 + Math.random() * 500, now);
+        gain.gain.setValueAtTime(0.15, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.12);
+        osc.start(now);
+        osc.stop(now + 0.12);
+      }
+    }
+
+    const iqBar = document.getElementById('iqBar');
+    const scanStatus = document.getElementById('scanStatus');
+    let progress = 0;
+    const scanTimer = setInterval(() => {
+      progress += 5;
+      iqBar.style.width = progress + '%';
+      if (progress >= 100) {
+        clearInterval(scanTimer);
+        scanStatus.innerHTML = 'النتيجة: <span style="color:#ffff00;">-404 (لم يتم العثور على مخ!)</span>';
+      }
+    }, 120);
+
+    const runawayBtn = document.getElementById('runawayBtn');
+    const admitBtn = document.getElementById('admitBtn');
+    const roastText = document.getElementById('roastText');
+    const taunts = [
+      "بطيء يا غبي 😂",
+      "مستحيل تصيدني 🏃‍♂️💨",
+      "وين رايح؟ اعترف وبس!",
+      "حاول مرة ثانية يا عبقري 🤡",
+      "أصابعك ما تساعد 🤣",
+      "خلاص اضغط الأخضر وارتاح!"
+    ];
+    let dodgeCount = 0;
+
+    function dodgeButton(e) {
+      if (e) e.preventDefault();
+      playGoofySound('boing');
+      dodgeCount++;
+
+      runawayBtn.style.position = 'fixed';
+      const maxX = window.innerWidth - runawayBtn.offsetWidth - 20;
+      const maxY = window.innerHeight - runawayBtn.offsetHeight - 20;
+      const randX = Math.max(10, Math.floor(Math.random() * maxX));
+      const randY = Math.max(10, Math.floor(Math.random() * maxY));
+
+      runawayBtn.style.left = randX + 'px';
+      runawayBtn.style.top = randY + 'px';
+      runawayBtn.style.transform = `rotate(${Math.random() * 40 - 20}deg)`;
+      runawayBtn.textContent = taunts[dodgeCount % taunts.length];
+
+      const newScale = Math.min(1.65, 1 + dodgeCount * 0.08);
+      admitBtn.style.transform = `scale(${newScale}) rotate(-2deg)`;
+      roastText.textContent = `حاولت تثبت إنك ذكي ${dodgeCount} مرات وفشلت يا غبي!`;
+    }
+
+    runawayBtn.addEventListener('mouseenter', dodgeButton);
+    runawayBtn.addEventListener('touchstart', dodgeButton, { passive: false });
+    runawayBtn.addEventListener('click', dodgeButton);
+
+    const certBox = document.getElementById('certBox');
+    const certSerial = document.getElementById('certSerial');
+
+    admitBtn.addEventListener('click', () => {
+      playGoofySound('clown');
+      certBox.style.display = 'block';
+      const randomId = Math.floor(100000 + Math.random() * 900000);
+      certSerial.textContent = `رقم ملف الغباء: #STUPID-${randomId} | التقييم: أسطورة الغباء`;
+      admitBtn.textContent = "كفو عليك يا غبي 🎉🤡";
+
+      for (let i = 0; i < 25; i++) {
+        setTimeout(() => {
+          spawnSticker(
+            Math.random() * window.innerWidth,
+            Math.random() * window.innerHeight
+          );
+        }, i * 60);
+      }
+    });
+
+    const chaosBtn = document.getElementById('chaosBtn');
+    chaosBtn.addEventListener('click', () => {
+      playGoofySound('boing');
+      document.body.classList.toggle('dizzy-mode');
+      chaosBtn.textContent = document.body.classList.contains('dizzy-mode')
+        ? "وقف الدوخة 🤢"
+        : "زر غبي لا تضغطه 🌀";
+    });
+
+    const stickers = ["غبي!", "🤡", "مخ مقفل", "غبي 100%", "🧠❌", "يا غبي"];
+    const colors = ["#ff0000", "#0000ff", "#ff00ff", "#00ff00", "#ffff00"];
+
+    function spawnSticker(x, y) {
+      const el = document.createElement('div');
+      el.className = 'floating-sticker';
+      el.textContent = stickers[Math.floor(Math.random() * stickers.length)];
+      el.style.left = x + 'px';
+      el.style.top = y + 'px';
+      el.style.color = colors[Math.floor(Math.random() * colors.length)];
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 1300);
+    }
+
+    document.addEventListener('click', (e) => {
+      playGoofySound('tap');
+      spawnSticker(e.clientX, e.clientY);
+    });
+  </script>
+</body>
+</html>
